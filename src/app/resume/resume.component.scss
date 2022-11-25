@@ -1,0 +1,31 @@
+button {
+    background-color: darkblue;
+    color: whitesmoke;
+    padding: .25rem;
+    border-radius: .25px;
+    font-size: 15px;
+    margin: 5px
+}
+
+button:hover {
+    background-color: rgb(14, 99, 49);
+}
+
+div {
+    font-family: sans-serif;
+}
+
+li {
+    font-family: sans-serif;
+    font-size: 13px;
+}
+
+.long {
+    width: 90px;
+    height: 55px;
+}
+
+img {
+    border: .5px solid black;
+    padding: 5px 5px 5px 5px;
+}
