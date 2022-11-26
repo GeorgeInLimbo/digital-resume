@@ -1,0 +1,11 @@
+<div class="pokemon-grid">
+    <div class="box" *ngFor="let poke of pokemon | async">
+        <img [src]="poke.sprites.front_default" alt="Pokemon">
+        <h3>{{ poke.name | uppercase }}</h3>
+        ID: {{ poke.id }}
+        <br>
+        Type: {{ poke.types[0].type.name | uppercase }}
+        <br>
+        Attack: {{ poke.moves[0].move.name | uppercase }}
+    </div>
+</div>

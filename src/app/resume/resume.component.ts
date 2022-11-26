@@ -1,6 +1,4 @@
-// The ResumeComponent is pulling information from the JobHistory, which I am using to hold information from
-// previous roles in different companies inluding supervisors, start and end dates, responsibilities I had
-// for each position that I held. 
+
 
 import { Component } from '@angular/core';
 import { JobHistory } from '../job-history';

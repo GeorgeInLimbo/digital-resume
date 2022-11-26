@@ -1,7 +1,10 @@
+<!-- This page utilizes a lot of Angular data binding {{some data}} to display information saved in the app. -->
+
+
 <section *ngIf="occupation">
     <div>
-        <!-- <img class="long"
-            src="https://www.dhititlelive.com/Resource/LandingScreenLogo/d6a20747-c562-e511-80d8-c4346bb749ef"><br> -->
+        <img src="{{occupation.logo}}">
+        <br>
         {{occupation.company}}
         <br>
         {{occupation.title}}

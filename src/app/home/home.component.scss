@@ -1,3 +1,9 @@
 img {
-    border: .5px solid black;
+    display: block;
+    max-width: 500px;
+    max-height: 500px;
+    padding: 2px;
+    width: auto;
+    height: auto;
+    border: .5px solid gray;
 }

@@ -1,16 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { RouterTestingModule } from '@angular/router/testing';
 import { ResumeComponent } from './resume/resume.component';
 import { SkillsComponent } from './skills/skills.component';
 import { HomeComponent } from './home/home.component';
+import { PokedexComponent } from './pokedex/pokedex.component';
 
 const routes: Routes = [
   { path: 'resume', component: ResumeComponent },
   { path: 'skills', component: SkillsComponent },
   { path: 'home', component: HomeComponent },
-  { path: '', redirectTo: '/home', pathMatch: 'full' }
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
   // ^^ This redirects the given route to the home page automatically.
+  { path: 'pokedex', component: PokedexComponent }
 
 ];
 
