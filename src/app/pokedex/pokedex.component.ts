@@ -1,8 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ServiceService } from '../service.service';
-import { switchMap, forkJoin, tap, Observable } from 'rxjs';
-import { IDetails } from '../interfaces';
-
+import { ServiceService } from '../pokemon.service';
 
 @Component({
   selector: 'app-pokedex',
@@ -12,17 +9,14 @@ import { IDetails } from '../interfaces';
 
 export class PokedexComponent implements OnInit {
 
-  pokemon: Observable<IDetails[]> = this.dataService.getPokemon().pipe(
-    switchMap(res => {
-      const detailRequests = res.results.map(n => this.dataService.getDetails(n.name));
-      return forkJoin([...detailRequests]);
-    }), tap(x => console.log(x))
-  )
+  pokemon$ = this.dataService.pokemon$
 
   constructor(
     private dataService: ServiceService
   ) { }
 
-  ngOnInit() { }
+  ngOnInit(): void { }
+
+
 
 }

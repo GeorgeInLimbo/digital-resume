@@ -1,42 +1,51 @@
 <!-- This page utilizes a lot of Angular data binding {{some data}} to display information saved in the app. -->
-
-
 <section *ngIf="occupation">
-    <div>
-        <img src="{{occupation.logo}}">
-        <br>
-        {{occupation.company}}
-        <br>
-        {{occupation.title}}
-        <br>
-        {{occupation.contact}}
-        <br>
-        {{occupation.startDate}} to {{occupation.endDate}}
+    <div class="container-1">
+        <div class="box-1">
+            <img src="{{occupation.logo}}">
+        </div>
+        <div class="box-2">
+            <b>{{occupation.company}}</b>
+            <br>
+            {{occupation.title}}
+            <br>
+            {{occupation.contact}}
+            <br>
+            {{occupation.startDate}} to {{occupation.endDate}}
+        </div>
+        <div class="box-3">
+            <p>{{occupation.summary}}</p>
+        </div>
     </div>
-    <p>{{occupation.summary}}</p>
+
 
     <!-- (click) is an example of Angular's event binding syntax. The parentheses instruct Angular to listen
 for the corresponding button's click event, at which point it will execute the assigned method. -->
 
-    <div>
-        <button type="button" (click)="showDuties()">Responsibilities</button>
-        <button type="button" (click)="showSupervisors()">Supervisors</button>
-    </div>
+    <button class="button-17" type="button" (click)="showDuties()">Responsibilities</button>
+    <button class="button-17" type="button" (click)="showSupervisors()">Supervisors</button>
 
     <!-- ngIf allows me to analyze a boolean value inside the HTML syntax.
-ngFor allows me to loop through the data provided in the class file.  -->
-
+     ngFor allows me to loop through the data provided in the class file.  -->
     <div *ngIf="displayDuties">
-        <ul *ngFor="let duty of occupation.duties">
-            <li>{{duty}}</li>
-        </ul>
-        <button type="button" (click)="collapse()">Collapse</button>
+        <div class="additional-info">
+            <ul *ngFor="let duty of occupation.duties">
+                <li>{{duty}}</li>
+            </ul>
+        </div>
+        <button class="button-17" type="button" (click)="collapse()">Collapse</button>
     </div>
+
     <div *ngIf="displaySupervisors">
-        <ul *ngFor="let boss of occupation.supervisors">
-            <li>{{boss}}</li>
-        </ul>
-        <button type="button" (click)="collapse()">Collapse</button>
+        <div class="additional-info">
+            <ul *ngFor="let boss of occupation.supervisors">
+                <li>{{boss}}</li>
+            </ul>
+        </div>
+
+        <button class="button-17" type="button" (click)="collapse()">Collapse</button>
     </div>
+    <hr />
+
+    <br><br>
 </section>
-<br><br>

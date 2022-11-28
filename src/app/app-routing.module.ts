@@ -4,6 +4,7 @@ import { ResumeComponent } from './resume/resume.component';
 import { SkillsComponent } from './skills/skills.component';
 import { HomeComponent } from './home/home.component';
 import { PokedexComponent } from './pokedex/pokedex.component';
+import { PokemonDetailComponent } from './pokemon-detail/pokemon-detail.component';
 
 const routes: Routes = [
   { path: 'resume', component: ResumeComponent },
@@ -11,7 +12,8 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   // ^^ This redirects the given route to the home page automatically.
-  { path: 'pokedex', component: PokedexComponent }
+  { path: 'pokedex', component: PokedexComponent },
+  { path: 'pokemon-detail/:id', component: PokemonDetailComponent }
 
 ];
 

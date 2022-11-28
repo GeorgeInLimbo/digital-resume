@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ContactInfo } from '../interfaces';
+import { ContactInfo } from '../job-interfaces';
 
 @Component({
   selector: 'app-home',

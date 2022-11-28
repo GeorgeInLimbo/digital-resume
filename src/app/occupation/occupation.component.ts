@@ -3,7 +3,7 @@
 // for each position that I held. 
 
 import { Component, Input } from '@angular/core';
-import { Jobs } from '../interfaces';
+import { Jobs } from '../job-interfaces';
 
 @Component({
   selector: 'app-occupation',

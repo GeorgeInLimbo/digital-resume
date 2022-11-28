@@ -37,12 +37,12 @@ export class SkillsComponent {
   references = [
     {
       name: 'Jake Smith',
-      relationship: 'Friend, Full Stack Developer',
+      relationship: 'Friend, Full Stack Developer, Excellent Hockey Player',
       contact: '(303) 885-9035'
     },
     {
       name: 'Dr. Terry LaValley',
-      relationship: 'Former Principal',
+      relationship: 'Former Principal, His University kicked him out because he had obtained too much knowledge.',
       contact: '(303) 431-6926'
     }
   ]

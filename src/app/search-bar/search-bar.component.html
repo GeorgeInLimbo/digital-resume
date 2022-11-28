@@ -1,0 +1,9 @@
+<input #searchBox type="text" placeholder="Search for Pokemon" (input)="search(searchBox.value)">
+<ul>
+    <li *ngFor="let pokemon of filterPokemon$ | async">
+        <a routerLink="/pokemon-detail/{{pokemon.id}}">
+            {{pokemon.name | uppercase}}
+        </a>
+    </li>
+</ul>
+<button type="button" routerLink="{{ random }}">Random Pokemon</button>

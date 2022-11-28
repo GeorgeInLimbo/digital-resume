@@ -9,6 +9,9 @@ import { HomeComponent } from './home/home.component';
 import { OccupationComponent } from './occupation/occupation.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PokedexComponent } from './pokedex/pokedex.component';
+import { SearchBarComponent } from './search-bar/search-bar.component';
+import { FormsModule } from '@angular/forms';
+import { PokemonDetailComponent } from './pokemon-detail/pokemon-detail.component';
 
 @NgModule({
   declarations: [
@@ -18,12 +21,15 @@ import { PokedexComponent } from './pokedex/pokedex.component';
     NavComponent,
     HomeComponent,
     OccupationComponent,
-    PokedexComponent
+    PokedexComponent,
+    SearchBarComponent,
+    PokemonDetailComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

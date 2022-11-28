@@ -3,19 +3,20 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: darkblue;
+    background-color: lightblue;
     position: fixed;
     top: 0;
     width: 100%;
 }
 
 img {
-    width: 20px;
-    height: 20px;
+    width: auto;
+    height: 15px;
 }
 
 li {
     font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     float: left;
     border-right: 1px solid #bbb;
 }
@@ -26,7 +27,7 @@ li:last-child {
 
 li a {
     display: block;
-    color: white;
+    color: black;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -34,5 +35,5 @@ li a {
 
 /* Change the link color to #111 (black) on hover */
 li a:hover {
-    background-color: rgb(14, 99, 49);
+    background-color: whitesmoke;
 }

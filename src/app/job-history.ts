@@ -1,4 +1,4 @@
-import { Jobs } from './interfaces'
+import { Jobs } from './job-interfaces'
 
 export const JobHistory: Jobs[] = [
     {
@@ -63,7 +63,7 @@ export const JobHistory: Jobs[] = [
         supervisors: [
             'Ron Larson, Owner',
             'Erin Harryman, Client Services Manager',
-            'Steve Cizik, Senior Associate'
+            'Steve Cizik, JD, Senior Associate'
         ]
     },
 
