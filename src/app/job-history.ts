@@ -8,12 +8,15 @@ export const JobHistory: Jobs[] = [
         startDate: 'March 2021',
         endDate: 'September 2022',
         contact: '(303) 649-7400',
-        summary: 'Facilitated multi-party real estate transactions. Prepared financial documents including Closing Disclosures and administrative documentation.',
+        summary: 'Facilitated multi-party real estate transactions. Prepared financial documents including Closing Disclosures and administrative documentation. Responsible for handling Escrow Accounts for Refinances, New Home Purchases, 1031 exchanges, and Hold-Opens.',
         duties: [
             'Prepared Closing Disclosure Statements for new home transactions.',
             'Include Section 1031 Exchange transaction in the sale of real estate.',
+            'Coordinate with Homeowner Associations and Utility providers for numerous developments.',
+            'Work directly with Loan Officers to adhere to terms provided in mortgages prior to closing.',
             'Work directly with Loan Officers and third parties to ensure requirements for all involved parties are satisfied.',
-            'Perform Notary services.'
+            'Participate in continuing education regarding county and state regulations and best practices.',
+            'Certifications: Notary Public'
         ],
         supervisors: [
             'Carla Jenson, Regional Manager',
@@ -36,7 +39,7 @@ export const JobHistory: Jobs[] = [
             'Prepare income tax returns for S-Corporations, C-Corporations, LLCs, Partnerships, and individuals',
             'Prepare payroll tax returns for small businesses.',
             'Provide catered tax resolutions services for small businesses and individuals.',
-            'Wore all the hats.'
+            'License: Enrolled Agent'
         ],
         supervisors: [
             'George A. Clam, EA'
@@ -58,10 +61,11 @@ export const JobHistory: Jobs[] = [
             'Provide zealous representation in the event of an audit.',
             'Negotiate settlements of Tax Debt.',
             'Reach formal resolutions in the form of an Installment Agreement or a Non-Collectible Status.',
-            'Supervisor to two employees.'
+            'Supervisor to two employees.',
+            'Licenses: Enrolled Agent'
         ],
         supervisors: [
-            'Ron Larson, Owner',
+            'Ron Larson, Vice President & Owner',
             'Erin Harryman, Client Services Manager',
             'Steve Cizik, JD, Senior Associate'
         ]

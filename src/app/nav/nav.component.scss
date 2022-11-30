@@ -1,9 +1,10 @@
 ul {
     list-style-type: none;
+    // list-style: circle;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: lightblue;
+    background-color: #3c5aa6;
     position: fixed;
     top: 0;
     width: 100%;
@@ -16,9 +17,10 @@ img {
 
 li {
     font-weight: bold;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     float: left;
     border-right: 1px solid #bbb;
+    padding-left: 75px;
+    padding-right: 75px;
 }
 
 li:last-child {
@@ -27,13 +29,12 @@ li:last-child {
 
 li a {
     display: block;
-    color: black;
+    color: whitesmoke;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
 
-/* Change the link color to #111 (black) on hover */
 li a:hover {
-    background-color: whitesmoke;
+    background-color: #2a75bb;
 }

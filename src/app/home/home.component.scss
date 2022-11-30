@@ -1,11 +1,55 @@
-img {
+.selfie {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    max-width: 500px;
-    max-height: 500px;
+    max-width: 380px;
+    max-height: 380px;
+    width: auto;
+    height: auto;
+    border: 2px solid black;
+}
+
+.logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 75px;
+    max-height: 75px;
     padding: 2px;
     width: auto;
     height: auto;
-    border: .5px solid gray;
+    // border: .5px solid gray;
+}
+
+p {
+    margin-right: 50px
+}
+
+.container1 {
+    display: flex;
+    justify-content: center;
+}
+
+.box1 {
+    flex: 1;
+}
+
+.box2 {
+    flex: 1;
+}
+
+.box3 {
+    flex: 1;
+}
+
+.box4 {
+    flex: 1;
+}
+
+.box5 {
+    flex: 1;
+}
+
+aside {
+    font-size: 17px;
 }

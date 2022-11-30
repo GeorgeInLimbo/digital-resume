@@ -7,16 +7,12 @@ import { ServiceService } from '../pokemon.service';
   styleUrls: ['./pokedex.component.scss']
 })
 
-export class PokedexComponent implements OnInit {
+export class PokedexComponent {
 
   pokemon$ = this.dataService.pokemon$
 
   constructor(
     private dataService: ServiceService
   ) { }
-
-  ngOnInit(): void { }
-
-
 
 }

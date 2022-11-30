@@ -1,5 +1,3 @@
-// I use an interface to cast data from the Pokemon Observables into a curattered, readable format. 
-
 export interface ContactInfo {
     name: string;
     email: string;

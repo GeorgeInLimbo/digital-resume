@@ -11,7 +11,6 @@ const routes: Routes = [
   { path: 'skills', component: SkillsComponent },
   { path: 'home', component: HomeComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
-  // ^^ This redirects the given route to the home page automatically.
   { path: 'pokedex', component: PokedexComponent },
   { path: 'pokemon-detail/:id', component: PokemonDetailComponent }
 

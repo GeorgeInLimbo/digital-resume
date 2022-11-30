@@ -18,6 +18,7 @@ export class ServiceService {
   // data in a second observable.
   // forkJoin waits for all passed observables to emit and complete, and then it will emit an array with the
   // processed values from the IDetails Observable.
+
   pokemon$: Observable<IDetails[]> = this.getPokemon().pipe(
     switchMap(response => {
       const details = response.results.map(pokemon => this.getDetails(pokemon.name));
@@ -32,6 +33,7 @@ export class ServiceService {
   // Returns an array of objects [{name: string, url: string}, ...] but is limited to the name of the pokemon.
   // We need to make another GET request using the data from this observable to get more data.
   // This is an example of a basic GET Request to a Web API. 
+
   getPokemon() {
     return this.http.get<IPokemon>(`${this.endpoint}?limit=151`);
   }
@@ -39,23 +41,9 @@ export class ServiceService {
   // This is the second GET request being made with data from the first GET request. We're using the 
   // pokemon's name property to request data from a different endpoint. By completion, this method will
   // be executed 152 times, at least.
+
   getDetails(name: string) {
     return this.http.get<IDetails>(`${this.endpoint}/${name}`);
   }
 
 }
-// private searchTerm(term: string) {
-//   let searchData: string[] = [];
-//   searchData.push(`${term}`)
-// }
-
-// searchPokemon(term: string): Observable<IDetails[]> {
-//   if (!term.trim()) {  // trim() removes all whitespace characters from a string.
-//     return of([]);     // of() creates an observable of a given value.
-//   }
-//   return this.http.get<IDetails[]>(`${this.endpoint}/?name=${term}`).pipe(
-//     tap(x => x.length
-//       ? this.searchTerm(`found pokemon matching "${term}"`)
-//       : this.searchTerm(`no pokemon matching "${term}"`))
-//   )
-// }

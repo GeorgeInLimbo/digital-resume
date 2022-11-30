@@ -16,7 +16,6 @@ export interface IDetails {
     }
 }
 
-
 export interface IPokemon {
     count: number;
     next: string;

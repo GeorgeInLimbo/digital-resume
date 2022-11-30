@@ -1,4 +1,5 @@
 <!-- This page utilizes a lot of Angular data binding {{some data}} to display information saved in the app. -->
+<br>
 <section *ngIf="occupation">
     <div class="container-1">
         <div class="box-1">
@@ -17,13 +18,13 @@
             <p>{{occupation.summary}}</p>
         </div>
     </div>
-
-
+    <br>
     <!-- (click) is an example of Angular's event binding syntax. The parentheses instruct Angular to listen
 for the corresponding button's click event, at which point it will execute the assigned method. -->
-
-    <button class="button-17" type="button" (click)="showDuties()">Responsibilities</button>
-    <button class="button-17" type="button" (click)="showSupervisors()">Supervisors</button>
+    <div style="margin-left: 50px">
+        <button class="button-17" type="button" (click)="showDuties()">Responsibilities</button>
+        <button class="button-17" type="button" (click)="showSupervisors()">Supervisors</button>
+    </div>
 
     <!-- ngIf allows me to analyze a boolean value inside the HTML syntax.
      ngFor allows me to loop through the data provided in the class file.  -->
@@ -33,7 +34,9 @@ for the corresponding button's click event, at which point it will execute the a
                 <li>{{duty}}</li>
             </ul>
         </div>
-        <button class="button-17" type="button" (click)="collapse()">Collapse</button>
+        <div style="margin-left: 50px">
+            <button class="button-17" type="button" (click)="collapse()">Collapse</button>
+        </div>
     </div>
 
     <div *ngIf="displaySupervisors">
@@ -41,11 +44,11 @@ for the corresponding button's click event, at which point it will execute the a
             <ul *ngFor="let boss of occupation.supervisors">
                 <li>{{boss}}</li>
             </ul>
+            <div style="margin-left: 50px">
+                <button class="button-17" type="button" (click)="collapse()">Collapse</button>
+            </div>
         </div>
-
-        <button class="button-17" type="button" (click)="collapse()">Collapse</button>
     </div>
-    <hr />
 
     <br><br>
 </section>

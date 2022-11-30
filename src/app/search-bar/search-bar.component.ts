@@ -15,6 +15,9 @@ export class SearchBarComponent {
     private dataService: ServiceService,
   ) { }
 
+
+  // Search Bar functionality
+
   pokemon$ = this.dataService.pokemon$
 
   private _searchTerm = new Subject<string>();
@@ -33,8 +36,6 @@ export class SearchBarComponent {
           : [];
       })
     )
-
-
 
   // Random Search Functionality
   random: string = ``;

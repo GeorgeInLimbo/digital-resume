@@ -14,8 +14,6 @@ export class HomeComponent {
     location: 'Erie, CO'
   }
 
-  summary = 'A self-motivated Angular developer looking to utilize my strong foundation of technical knowledge to contribute to a team of other motivated professionals. I enjoy a fast-paced work environment and finding solutions to challenging problems.'
-
   constructor() { }
 
 }

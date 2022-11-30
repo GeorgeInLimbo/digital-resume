@@ -29,20 +29,15 @@ export class SkillsComponent {
     'CSS'
   ]
 
-  interests: string[] = [
-    'Woodworking',
-    'Blues Guitar'
-  ]
-
   references = [
     {
       name: 'Jake Smith',
-      relationship: 'Friend, Full Stack Developer, Excellent Hockey Player',
+      relationship: 'Friend, Full Stack Developer',
       contact: '(303) 885-9035'
     },
     {
       name: 'Dr. Terry LaValley',
-      relationship: 'Former Principal, His University kicked him out because he had obtained too much knowledge.',
+      relationship: 'Former Principal',
       contact: '(303) 431-6926'
     }
   ]
