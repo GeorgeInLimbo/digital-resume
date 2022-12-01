@@ -1,11 +1,12 @@
 .selfie {
     display: block;
     margin-left: auto;
-    margin-right: auto;
-    max-width: 380px;
-    max-height: 380px;
+    // margin-right: auto;
+    max-width: 280px;
+    max-height: 280px;
     width: auto;
     height: auto;
+    padding: 2px;
     border: 2px solid black;
 }
 
@@ -28,6 +29,21 @@ p {
 .container1 {
     display: flex;
     justify-content: center;
+}
+
+.title-container {
+    display: flex;
+    justify-content: center;
+}
+
+.titlebox {
+    flex: 1;
+    padding: 10px;
+}
+
+.picbox {
+    flex: 1;
+    padding: 10px;
 }
 
 .box1 {
@@ -55,5 +71,9 @@ aside {
 }
 
 section {
-    margin: 0 150px 0 150px;
+    margin: 0 150px;
+    text-align: center;
+    border-left: 1px solid black;
+    // border-right: 1px solid black;
+    padding: 15px
 }

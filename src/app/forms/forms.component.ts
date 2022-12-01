@@ -14,48 +14,45 @@ export class FormsComponent implements OnInit {
 
   ngOnInit() {
 
-    const address = this.fb.group({
-      street: '',
-      city: '',
-      state: '',
-      zip: ''
-    })
+    // const address = this.fb.group({
+    //   street: '',
+    //   city: '',
+    //   state: '',
+    //   zip: ''
+    // })
 
     this.myForm = this.fb.group({
       name: '',
       password: ['', [
         Validators.required,
-        // Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$')
+        Validators.pattern("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}$")
       ]],
       email: ['', [
         Validators.required,
         Validators.email
       ]],
-      phones: this.fb.array([]),
-      homeAddress: address,
-      companyAddress: address,
-      agree: [false, [Validators.requiredTrue]]
+      nicknames: this.fb.array([]),
+      agree: [false, [Validators.requiredTrue]],
+      // homeAddress: address,
+      // companyAddress: address
     })
 
     this.myForm.valueChanges.subscribe(console.log)
   }
 
-  get phoneForms() {
-    return this.myForm.get('phones') as FormArray;
+  get nicks() {
+    return this.myForm.get('nicknames') as FormArray;
   }
 
-  addPhone() {
-    const phone = this.fb.group({
-      area: [],
-      prefix: [],
-      line: []
+  addNick() {
+    const nickname = this.fb.group({
+      newName: []
     })
-
-    this.phoneForms.push(phone);
+    this.nicks.push(nickname);
   }
 
-  deletePhone(i: number) {
-    this.phoneForms.removeAt(i);
+  deleteNick(i: number) {
+    this.nicks.removeAt(i);
   }
 
   get password() {

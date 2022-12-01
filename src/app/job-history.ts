@@ -29,7 +29,7 @@ export const JobHistory: Jobs[] = [
         company: 'Symbio Tax & Administration, LLC',
         logo: 'https://zenprospect-production.s3.amazonaws.com/uploads/pictures/628ddd18be91b20001477faa/picture',
         title: 'Owner/Operator',
-        startDate: 'June 2019',
+        startDate: 'March 2019',
         endDate: 'March 2021',
         contact: '(720) 926-2671',
         summary: 'Ran a sole proprietorship which worked with Tax Debt Resolution firms to assist mutual clients become compliant with filing requirements with both the federal and state tax authorities. Offered services for individuals, C-corporations, S-Corporations, and Partnerships. Payroll returns, bookkeeping, tax debt mitigation.',
@@ -51,7 +51,7 @@ export const JobHistory: Jobs[] = [
         logo: 'https://larsontaxrelief.com/wp-content/uploads/2022/04/larson-tax-relief-logo.jpg',
         title: 'Senior Associate',
         startDate: 'August 2015',
-        endDate: 'July 2019',
+        endDate: 'January 2019',
         contact: '(888) 589-0955',
         summary: 'Helped clients with considerable tax debt enter into agreements to eliminate debt. This included penalty abatement, Offers in Compromise, facilitating the release of tax liens on real estate assets, audit representation, audit reconsideration, installment agreement, and non-collectible status.',
         duties: [
@@ -68,6 +68,25 @@ export const JobHistory: Jobs[] = [
             'Ron Larson, Vice President & Owner',
             'Erin Harryman, Client Services Manager',
             'Steve Cizik, JD, Senior Associate'
+        ]
+    },
+
+    {
+        company: 'The Scher Group, PLLC',
+        logo: 'https://res.cloudinary.com/rootworks/image/upload/c_pad,h_800,w_1400/b_rgb:ffffff,c_lpad,f_auto,h_630,w_1200/v1/firms/firm-40197217/scher-group-social-logo-web-2020_ahqseu',
+        title: 'Staff Accountant',
+        startDate: 'January 2019',
+        endDate: 'April 2019',
+        contact: '(303) 443-9001',
+        summary: 'A seasonal position that required preparing high-income Form 1040 returns, Form 1099 return preparation, reconcilliations, and other tasks related to tax accounting.',
+        duties: [
+            'Review prior year income tax returns as well as current year forms and records to determine filing requirements.',
+            'Prepare Profit & Loss statements for Small Businesses with provided documentation.',
+            'Maximize deductions based on Small Business Deductions, and Itemizable items.',
+            'License: Enrolled Agent'
+        ],
+        supervisors: [
+            'Alan Scher, CPA'
         ]
     },
 

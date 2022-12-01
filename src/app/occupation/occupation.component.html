@@ -1,10 +1,12 @@
-<!-- This page utilizes a lot of Angular data binding {{some data}} to display information saved in the app. -->
 <br>
 <section *ngIf="occupation">
+
     <div class="container-1">
+
         <div class="box-1">
             <img src="{{occupation.logo}}">
         </div>
+
         <div class="box-2">
             <b>{{occupation.company}}</b>
             <br>
@@ -14,41 +16,56 @@
             <br>
             {{occupation.startDate}} to {{occupation.endDate}}
         </div>
+
         <div class="box-3">
             <p>{{occupation.summary}}</p>
         </div>
-    </div>
-    <br>
-    <!-- (click) is an example of Angular's event binding syntax. The parentheses instruct Angular to listen
-for the corresponding button's click event, at which point it will execute the assigned method. -->
+
+    </div><br>
+
     <div style="margin-left: 50px">
-        <button class="button-17" type="button" (click)="showDuties()">Responsibilities</button>
-        <button class="button-17" type="button" (click)="showSupervisors()">Supervisors</button>
+        <button mat-raised-button color="primary" (click)="showDuties()">
+            Responsibilities
+        </button>
+        <button mat-raised-button color="primary" (click)="showSupervisors()">
+            Supervisors
+        </button>
     </div>
 
-    <!-- ngIf allows me to analyze a boolean value inside the HTML syntax.
-     ngFor allows me to loop through the data provided in the class file.  -->
     <div *ngIf="displayDuties">
-        <div class="additional-info">
+        <div class="additional-info"><br>
+
             <ul *ngFor="let duty of occupation.duties">
-                <li>{{duty}}</li>
-            </ul>
+                <li>
+                    {{duty}}
+                </li>
+            </ul><br>
+
         </div>
+
         <div style="margin-left: 50px">
-            <button class="button-17" type="button" (click)="collapse()">Collapse</button>
+            <button mat-raised-button color="primary" (click)="collapse()">
+                Collapse
+            </button>
         </div>
+
     </div>
 
     <div *ngIf="displaySupervisors">
-        <div class="additional-info">
-            <ul *ngFor="let boss of occupation.supervisors">
-                <li>{{boss}}</li>
-            </ul>
-            <div style="margin-left: 50px">
-                <button class="button-17" type="button" (click)="collapse()">Collapse</button>
-            </div>
-        </div>
-    </div>
+        <div class="additional-info"><br>
 
-    <br><br>
+            <ul *ngFor="let boss of occupation.supervisors">
+                <li>
+                    {{boss}}
+                </li>
+            </ul><br>
+
+            <div style="margin-left: 50px">
+                <button mat-raised-button color="primary" (click)="collapse()">
+                    Collapse
+                </button>
+            </div>
+
+        </div>
+    </div><br><br>
 </section>

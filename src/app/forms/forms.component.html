@@ -1,97 +1,128 @@
-<h2>Form Example</h2>
-<p>This is an example of a Reactive Form using Angular. The benefit of using Reactive Forms is
+<h5 style="font-weight: bold; margin-left: 50px;">
+    Reactive Forms Example:
+</h5>
+
+<p style="font-size: 12px">
+    This is an example of a Reactive Form using Angular. The benefit of using Reactive Forms is
     the scalability resulting from using observable streams and sychronous updates based on
-    change detection through the Rethat each change to the form returns a new state to maintain
+    change detection through the ReactiveFormsModule that each change to the form returns a new state to maintain
     of the model. Since Reactive Forms are built around observables, where form inputs and form
-    values are provided as streams, which can be accessed synchronously.
+    values are provided as streams, which can be accessed synchronously. You can view the real time changes in the
+    browser with the JSON values reflected here:
 </p>
-<p>
-    You can view the real time changes in the browser with the JSON values reflected below:
-</p>
-<hr>
+
 <form [formGroup]="myForm">
-    Value: {{ myForm.value | json }}
-    <br><br>
 
-    <div style="text-align: center">
-        <h2>Create a fake account:</h2>
-        <mat-form-field>
-            <input matInput placeholder="Name" formControlName="name">
-        </mat-form-field>
-        <br>
-        <mat-form-field>
-            <input matInput type="password" placeholder="Fake Password" formControlName="password">
-            <mat-hint>
-                (1 Capital Letter, 1 lowercase letter, 1 Number, 1 Special Character)
-            </mat-hint>
-            <mat-error *ngIf="password!.invalid && password!.touched" class="has-text-danger">
-                This is a bad password.
-            </mat-error>
+    <section style="margin-left: 50px;">
+        JSON Values from Reactive Forms: {{ myForm.value | json }}
+    </section>
 
-        </mat-form-field>
-        <br>
-        <mat-form-field>
-            <input matInput placeholder="email" formControlName="email">
-            <mat-error *ngIf="email!.invalid && email!.touched">
-                Your email doesn't look quite right...
-            </mat-error>
-        </mat-form-field>
-        <div formArrayName="phones">
-            <div *ngFor="let phone of phoneForms.controls; let i = index" [formGroupName]="i">
-                <mat-form-field>
-                    <input matInput placeholder="area" formControlName="area">
-                </mat-form-field>
-                <mat-form-field>
-                    <input matInput placeholder="prefix" formControlName="prefix">
-                </mat-form-field>
-                <mat-form-field>
-                    <input matInput placeholder="line" formControlName="line">
-                </mat-form-field>
-                <button mat-raised-button color="warn" (click)="deletePhone(i)">
-                    Delete
+    <hr><br><br>
+
+    <div>
+
+        <div class="title">
+            Record your Nicknames
+        </div>
+
+        <div class="subtitle">
+
+            This is a toy form demonstrating how Reactive Forms work by streaming instances
+            each time their is a change event and to test Angular validations. No data will be saved on this web
+            application. It is strictly for demonstration purposes.
+
+            <br>
+
+            Please feel free to make up the information, and add (or delete) as many nicknames as you please!
+
+        </div>
+
+        <div style="text-align: center">
+
+            <mat-form-field>
+                <mat-label for="name">first name</mat-label>
+                <input matInput formControlName="name">
+            </mat-form-field>
+
+            <br>
+
+            <mat-form-field>
+
+                <mat-label for="password">fake password</mat-label>
+                <input matInput type="password" formControlName="password">
+
+                <!-- <mat-hint>
+                Capital, lowercase, number, special
+            </mat-hint> -->
+
+                <mat-error *ngIf="password!.invalid && password!.touched" class="has-text-danger">
+                    invalid password
+                </mat-error>
+
+            </mat-form-field>
+
+            <br>
+
+            <mat-form-field>
+
+                <mat-label for="email">
+                    fake email
+                </mat-label>
+                <input matInput formControlName="email">
+
+                <mat-error *ngIf="email!.invalid && email!.touched">
+                    invalid email
+                </mat-error>
+
+            </mat-form-field>
+
+            <br><br>
+
+            <div formArrayName="nicknames">
+                <div *ngFor="let nick of nicks.controls; let i = index" [formGroupName]="i">
+                    <mat-form-field>
+                        <mat-label for="newName">
+                            nickname
+                        </mat-label>
+                        <input matInput formControlName="newName">
+                    </mat-form-field>
+
+                    <button mat-raised-button color="warn" (click)="deleteNick(i)">
+                        delete
+                    </button>
+
+                </div>
+
+                <button mat-raised-button color="primary" (click)="addNick()">
+                    add a nickname
                 </button>
+
             </div>
         </div>
-        <button mat-raised-button color="primary" (click)="addPhone()">
-            Add Phone Number (optional)
-        </button>
+
         <br><br>
-        <h3>Home Address</h3>
-        <div formGroupName="homeAddress">
-            <mat-form-field>
-                <input matInput placeholder="Street Address" formControlName="street">
-            </mat-form-field>
-            <br>
-            <mat-form-field>
-                <input matInput placeholder="City" formControlName="city">
-            </mat-form-field>
-            <mat-form-field>
-                <input matInput placeholder="State" formControlName="state">
-            </mat-form-field>
-            <mat-form-field>
-                <input matInput placeholder="Zip Code" formControlName="zip">
-            </mat-form-field>
-        </div>
-        <h3>Company Address</h3>
-        <div formGroupName="companyAddress">
-            <mat-form-field>
-                <input matInput placeholder="Street Address" formControlName="street-address">
-            </mat-form-field>
-            <br>
-            <mat-form-field>
-                <input matInput placeholder="City" formControlName="city">
-            </mat-form-field>
-            <mat-form-field>
-                <input matInput placeholder="State" formControlName="state">
-            </mat-form-field>
-            <mat-form-field>
-                <input matInput placeholder="Zip Code" formControlName="zip">
-            </mat-form-field>
-        </div>
 
-        <mat-checkbox formControlName="agree" color="primary">Are you sure?</mat-checkbox>
-        <br>
-        <button mat-raised-button [disabled]="myForm.invalid" color="primary">Submit</button>
+        <div style="text-align: center">
+
+            <mat-checkbox formControlName="agree" color="primary">
+                Are you sure?
+            </mat-checkbox>
+
+            <br><br>
+
+            <button mat-raised-button [disabled]="myForm.invalid" color="primary">
+                Submit
+            </button>
+
+            <br>
+
+            <p class="subtitle">
+                The Submit button remains disabled until all validation requirements have been met. The checkbox adds
+                another layer of safety from bad data erroneously being added to a database.
+
+            </p>
+            <br><br>
+
+        </div>
     </div>
-
 </form>

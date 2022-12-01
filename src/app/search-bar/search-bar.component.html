@@ -1,4 +1,12 @@
-<input #searchBox type="text" placeholder="Search for Pokemon" (input)="search(searchBox.value)">
+<mat-form-field>
+    <input matInput #searchBox placeholder="Search for Pokemon" (input)="search(searchBox.value)">
+</mat-form-field>
+
+<button mat-raised-button color="primary" routerLink="{{ random }}">
+    Random Pokemon
+</button>
+
+<!-- <input #searchBox type="text" placeholder="Search for Pokemon" (input)="search(searchBox.value)"> -->
 <ul>
     <li *ngFor="let pokemon of filterPokemon$ | async">
         <a routerLink="/pokemon-detail/{{pokemon.id}}">
@@ -6,4 +14,7 @@
         </a>
     </li>
 </ul>
-<button class="button-17" type="button" routerLink="{{ random }}">Random Pokemon</button>
+
+<!-- <button mat-raised-button color="primary" routerLink="{{ random }}">
+    Random Pokemon
+</button> -->

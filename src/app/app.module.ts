@@ -14,7 +14,7 @@ import { FormsModule } from '@angular/forms';
 import { PokemonDetailComponent } from './pokemon-detail/pokemon-detail.component';
 import { FormsComponent } from './forms/forms.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
@@ -36,11 +36,11 @@ import { MatChipsModule } from '@angular/material/chips';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    NoopAnimationsModule,
     MatInputModule,
     MatButtonModule,
     MatSelectModule,

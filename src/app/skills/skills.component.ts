@@ -26,19 +26,19 @@ export class SkillsComponent {
     'TypeScript',
     'Angular',
     'HTML5',
-    'CSS'
+    'CSS3'
   ]
 
   references = [
     {
       name: 'Jake Smith',
-      relationship: 'Friend, Full Stack Developer',
-      contact: '(303) 885-9035'
+      relationship: 'Friend, Full Stack Developer, Hockey Player Extraordinaire',
+      contact: '(303) 555-9053'
     },
     {
       name: 'Dr. Terry LaValley',
-      relationship: 'Former Principal',
-      contact: '(303) 431-6926'
+      relationship: 'Former Principal, Former Juicer',
+      contact: '(303) 867-5309'
     }
   ]
 }
