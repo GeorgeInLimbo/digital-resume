@@ -13,7 +13,4 @@ export class HomeComponent {
     phoneNumber: '(720) 926-2671',
     location: 'Erie, CO'
   }
-
-  constructor() { }
-
 }

@@ -1,59 +1,46 @@
-<section style="margin: 0 50px">
+<section style="margin: 0 50px; text-align: center;">
     <div class="title">Skillset:</div>
-    <ul>
+    <ul class="certs">
         <li class="list" *ngFor="let skill of skills">
-            {{skill}}
+            <img class="logo" src="{{skill}}">
         </li>
-    </ul><br><br>
-
-    <div class="title">Certifications:</div>
-    <ul>
-        <li class="list" *ngFor="let cert of certifications">{{cert}}</li>
     </ul>
 
-    <span style="font-size: 12px; margin-left: 900px">
-        (References are available upon request)
-    </span><br><br><br>
+    <div class="title">Certifications:</div>
+    <ul class="certs">
+        <li class="list" *ngFor="let cert of certifications">{{cert}}</li>
+    </ul><br>
+</section>
 
-    <!-- <div style="text-decoration: underline; font-weight: bold; padding-bottom: 5px;">References</div>
-<ul>
-    <li *ngFor="let ref of references">
-        {{ref.name}}<br>
-        {{ref.relationship}}<br>
-        {{ref.contact}}<br><br>
+<div style="font-weight: bold">Two Truths and a Lie:</div>
+<hr />
+<div>*You'll have to invite me in for an interview to get the correct answer.</div>
+<br>
+<ol>
+    <li>
+        I recorded an EP with my high school rock band at a studio that used the mixing board they used to master
+        the
+        movie "Top Gun." We worked
+        with
+        the same producer that discovered Limp Bizkit. When I asked him about discovering Fred Durst he told me, "We
+        all
+        make mistakes,
+        George."
     </li>
-</ul> -->
+    <li>
+        I've prepared hundreds of tax returns, including a Form 1040 for one of the lead performers in the highly
+        acclaimed
+        film,
+        "Kindergarten Cop."
+    </li>
+    <li>
+        I built a coffee table from Walnut and Maple using traditional joinery, and that table is currently
+        furnishing
+        the State Capital Building after it was seen displayed at a gallery for a makerspace I belong to called
+        Tinkermill. There is now a water ring on that table.
+    </li>
+</ol>
 
-
-    <div style="font-weight: bold">Two Truths and a Lie:</div>
-    <hr />
-    <div>*You'll have to invite me in for an interview to get the correct answer.</div>
-    <br>
-    <ol>
-        <li>
-            I recorded an EP with my high school rock band at a studio that used the mixing board they used to master
-            the
-            movie "Top Gun." We worked
-            with
-            the same producer that discovered Limp Bizkit. When I asked him about discovering Fred Durst he told me, "We
-            all
-            make mistakes,
-            George."
-            <br><br>
-        </li>
-        <li>
-            I've prepared hundreds of tax returns, including a Form 1040 for one of the lead performers in the highly
-            acclaimed
-            film,
-            "Kindergarten Cop."
-            <br><br>
-        </li>
-        <li>
-            I built a coffee table from Walnut and Maple using traditional joinery, and that table is currently
-            furnishing
-            the State Capital Building after it was seen displayed at a gallery for a makerspace I belong to called
-            Tinkermill. There is now a water ring on that table.
-        </li>
-    </ol>
-
-</section><br><br><br>
+<p style="font-size: 12px; text-align: right; padding-top: 30px;">
+    (References are available upon request)
+</p>

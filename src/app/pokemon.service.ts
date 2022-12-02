@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { IDetails, IPokemon } from './pokemon-interfaces';
-import { forkJoin, Observable, switchMap } from 'rxjs';
+import { BehaviorSubject, finalize, forkJoin, Observable, switchMap } from 'rxjs';
 import { getLocaleId } from '@angular/common';
 
 @Injectable({
@@ -9,6 +9,8 @@ import { getLocaleId } from '@angular/common';
 })
 
 export class ServiceService {
+
+  private _loading = new BehaviorSubject<boolean>(false);
 
   endpoint: string = 'https://pokeapi.co/api/v2/pokemon';
 
@@ -23,8 +25,13 @@ export class ServiceService {
     switchMap(response => {
       const details = response.results.map(pokemon => this.getDetails(pokemon.name));
       return forkJoin([...details]);
+    }),
+    finalize(() => {
+      this._loading.next(false)
     })
   )
+
+  loading$ = this._loading.asObservable();
 
   constructor(
     private http: HttpClient
@@ -35,6 +42,7 @@ export class ServiceService {
   // This is an example of a basic GET Request to a Web API. 
 
   getPokemon() {
+    this._loading.next(true);
     return this.http.get<IPokemon>(`${this.endpoint}?limit=151`);
   }
 

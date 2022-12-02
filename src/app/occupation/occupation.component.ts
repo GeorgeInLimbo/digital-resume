@@ -11,7 +11,9 @@ import { Jobs } from '../job-interfaces';
   styleUrls: ['./occupation.component.scss']
 })
 export class OccupationComponent {
-  @Input() occupation?: Jobs; // OccupationComponent is a child component (or Feature Component) of ResumeComponent.
+
+  @Input() occupation?: Jobs;
+  // OccupationComponent is a child component (or Feature Component) of ResumeComponent.
 
   displayDuties = false;
   displaySupervisors = false;

@@ -9,7 +9,8 @@ import { ServiceService } from '../pokemon.service';
 
 export class PokedexComponent {
 
-  pokemon$ = this.dataService.pokemon$
+  pokemon$ = this.dataService.pokemon$;
+  loading$ = this.dataService.loading$;
 
   constructor(
     private dataService: ServiceService

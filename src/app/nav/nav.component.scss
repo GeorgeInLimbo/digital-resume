@@ -1,40 +1,31 @@
-ul {
-    list-style-type: none;
-    // list-style: circle;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #3c5aa6;
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-
 img {
     width: auto;
-    height: 15px;
+    height: 25px;
 }
 
-li {
-    font-weight: bold;
-    float: left;
+span {
     border-right: 1px solid #bbb;
-    padding-left: 55px;
-    padding-right: 55px;
 }
 
-li:last-child {
+span:last-child {
     border-right: none;
 }
 
-li a {
-    display: block;
+a {
     color: whitesmoke;
-    text-align: center;
-    padding: 14px 16px;
     text-decoration: none;
 }
 
-li a:hover {
-    background-color: #2a75bb;
+span a:hover {
+    color: gray;
+}
+
+span {
+    padding-right: 3.5rem;
+    padding-left: 3.5rem;
+}
+
+.navbar {
+    // position: fixed;
+    width: 100%;
 }

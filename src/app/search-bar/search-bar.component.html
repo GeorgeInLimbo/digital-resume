@@ -6,15 +6,10 @@
     Random Pokemon
 </button>
 
-<!-- <input #searchBox type="text" placeholder="Search for Pokemon" (input)="search(searchBox.value)"> -->
-<ul>
+<ul class="search-result">
     <li *ngFor="let pokemon of filterPokemon$ | async">
         <a routerLink="/pokemon-detail/{{pokemon.id}}">
             {{pokemon.name | uppercase}}
         </a>
     </li>
 </ul>
-
-<!-- <button mat-raised-button color="primary" routerLink="{{ random }}">
-    Random Pokemon
-</button> -->

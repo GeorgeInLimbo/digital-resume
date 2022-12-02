@@ -1,85 +1,78 @@
-<h5 style="font-weight: bold; margin-left: 50px;">
-    Reactive Forms Example:
-</h5>
-
-<p style="font-size: 12px">
-    This is an example of a Reactive Form using Angular. The benefit of using Reactive Forms is
-    the scalability resulting from using observable streams and sychronous updates based on
-    change detection through the ReactiveFormsModule that each change to the form returns a new state to maintain
-    of the model. Since Reactive Forms are built around observables, where form inputs and form
-    values are provided as streams, which can be accessed synchronously. You can view the real time changes in the
-    browser with the JSON values reflected here:
-</p>
+<!-- 
+    This is an example of a Reactive Form. The benefit of using Reactive Forms is
+    the scalability of the observable model. Reactive Forms use data streams and can update sychronously. 
+    Each change to the form returns a completely new state, which helps maintain the integrity
+    of the model.
+-->
 
 <form [formGroup]="myForm">
 
-    <section style="margin-left: 50px;">
-        JSON Values from Reactive Forms: {{ myForm.value | json }}
-    </section>
+    <!-- <section style="margin-left: 50px; text-align: center;">
+        {{ myForm.value | json }}
+    </section> -->
 
-    <hr><br><br>
-
-    <div>
-
+    <div class="formsPage">
         <div class="title">
-            Record your Nicknames
+            What are your Nicknames?
         </div>
 
         <div class="subtitle">
 
-            This is a toy form demonstrating how Reactive Forms work by streaming instances
-            each time their is a change event and to test Angular validations. No data will be saved on this web
-            application. It is strictly for demonstration purposes.
-
-            <br>
-
-            Please feel free to make up the information, and add (or delete) as many nicknames as you please!
+            This is a demonstration of how Reactive Forms work by streaming instances
+            each time their is a change event and to test Angular validations. Please feel free to use fake information.
+            Add as many nicknames as you please! Make up some new ones!
 
         </div>
 
-        <div style="text-align: center">
+        <div class="container1">
 
-            <mat-form-field>
-                <mat-label for="name">first name</mat-label>
-                <input matInput formControlName="name">
-            </mat-form-field>
+            <div class="box1">
 
-            <br>
+                <mat-form-field>
+                    <mat-label for="name">first name</mat-label>
+                    <input matInput formControlName="name">
+                </mat-form-field>
+            </div>
 
-            <mat-form-field>
 
-                <mat-label for="password">fake password</mat-label>
-                <input matInput type="password" formControlName="password">
+            <div class="box2">
+                <mat-form-field>
 
-                <!-- <mat-hint>
-                Capital, lowercase, number, special
-            </mat-hint> -->
+                    <mat-label for="email">
+                        fake email
+                    </mat-label>
+                    <input matInput formControlName="email">
 
-                <mat-error *ngIf="password!.invalid && password!.touched" class="has-text-danger">
-                    invalid password
-                </mat-error>
+                    <mat-error *ngIf="email!.invalid && email!.touched">
+                        invalid email
+                    </mat-error>
 
-            </mat-form-field>
+                </mat-form-field>
+            </div>
 
-            <br>
+            <div class="box3">
+                <mat-form-field>
 
-            <mat-form-field>
+                    <mat-label for="password">fake password</mat-label>
+                    <input matInput type="password" formControlName="password">
 
-                <mat-label for="email">
-                    fake email
-                </mat-label>
-                <input matInput formControlName="email">
+                    <mat-hint>
+                        <span>8 characters, uppercase, lowercase, number, symbol.</span>
+                    </mat-hint>
 
-                <mat-error *ngIf="email!.invalid && email!.touched">
-                    invalid email
-                </mat-error>
+                    <mat-error *ngIf="password!.invalid && password!.touched" class="has-text-danger">
+                        invalid password
+                    </mat-error>
 
-            </mat-form-field>
+                </mat-form-field>
+            </div>
 
-            <br><br>
+        </div>
 
-            <div formArrayName="nicknames">
+        <div class="container2">
+            <div class="box1" formArrayName="nicknames">
                 <div *ngFor="let nick of nicks.controls; let i = index" [formGroupName]="i">
+
                     <mat-form-field>
                         <mat-label for="newName">
                             nickname
@@ -100,29 +93,41 @@
             </div>
         </div>
 
-        <br><br>
 
-        <div style="text-align: center">
 
-            <mat-checkbox formControlName="agree" color="primary">
-                Are you sure?
-            </mat-checkbox>
+        <div class="container3">
+            <div class="box1">
+                <mat-checkbox formControlName="agree" color="primary">
+                    Are you sure?
+                </mat-checkbox>
+            </div>
 
-            <br><br>
 
-            <button mat-raised-button [disabled]="myForm.invalid" color="primary">
-                Submit
-            </button>
+            <div class="box2">
+                <button mat-raised-button [disabled]="myForm.invalid" (click)="displayNicknames()" color="primary">
+                    Submit
+                </button>
 
-            <br>
-
-            <p class="subtitle">
-                The Submit button remains disabled until all validation requirements have been met. The checkbox adds
-                another layer of safety from bad data erroneously being added to a database.
-
-            </p>
-            <br><br>
-
+                <div *ngIf="onSubmit">
+                    <ul *ngFor="let name of nicknames">
+                        <li>
+                            Nickname: {{name}}.
+                        </li>
+                    </ul>
+                </div>
+                <div *ngIf="!onSubmit">
+                    <p style="font-size:12px">Complete the required fields and add a nickname!</p>
+                </div>
+            </div>
         </div>
+
+
+
+        <p class="subtitle">
+            The Submit button remains disabled until all validation requirements have been met. The checkbox adds
+            another layer of safety from bad data erroneously being added to a database.
+
+        </p>
+
     </div>
 </form>
