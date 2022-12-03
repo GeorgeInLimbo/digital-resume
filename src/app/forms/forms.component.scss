@@ -1,6 +1,6 @@
 .formsPage {
-    margin-left: 280px;
-    margin-right: 280px;
+    margin-left: 25%;
+    margin-right: 25%;
 }
 
 p {
@@ -15,20 +15,21 @@ ul {
     font-size: 24px;
     font-weight: bold;
     text-align: center;
-    padding-top: 20pxss;
+    padding-top: 20px;
 }
 
 .subtitle {
     font-size: 16px;
     text-align: center;
     padding: 15px 0;
-    margin: 10px 150px 10px 150px;
+    // margin: 10px 150px 10px 150px;
 }
 
 .container1 {
     display: flex;
     text-align: center;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .container2 {

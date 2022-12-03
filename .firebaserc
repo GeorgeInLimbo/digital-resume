@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "georgeclamresume": {
+      "hosting": {
+        "digital-resume": [
+          "georgeclamresume"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "georgeclamresume"
+  }
+}

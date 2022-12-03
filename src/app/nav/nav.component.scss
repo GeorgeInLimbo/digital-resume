@@ -7,10 +7,15 @@ span a:hover {
     color: lightgray !important;
 }
 
-.navbar {
-    width: 100%;
-}
+// .navbar {
+//     width: 100%;
+// }
 
 .spacer {
     flex: 1;
+}
+
+mat-toolbar {
+    flex-wrap: wrap;
+    height: auto;
 }

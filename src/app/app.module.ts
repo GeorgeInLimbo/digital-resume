@@ -37,7 +37,8 @@ import { MatCardModule } from '@angular/material/card';
     PokedexComponent,
     SearchBarComponent,
     PokemonDetailComponent,
-    FormsComponent
+    FormsComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -55,7 +56,7 @@ import { MatCardModule } from '@angular/material/card';
     MatCheckboxModule,
     MatChipsModule,
     MatProgressSpinnerModule,
-    MatCardModule
+    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

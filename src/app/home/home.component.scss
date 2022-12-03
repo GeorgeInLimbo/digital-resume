@@ -17,6 +17,7 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .titlebox {
@@ -34,7 +35,7 @@ aside {
 }
 
 section {
-    margin: 0 150px;
+    margin: 5%;
     text-align: center;
     border-left: 1px solid black;
     border-right: 1px solid black;

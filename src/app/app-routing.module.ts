@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'pokedex', component: PokedexComponent },
   { path: 'pokemon-detail/:id', component: PokemonDetailComponent },
-  { path: 'forms', component: FormsComponent }
+  { path: 'forms', component: FormsComponent },
 
 ];
 
