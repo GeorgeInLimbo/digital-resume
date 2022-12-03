@@ -1,17 +1,18 @@
-<div style="text-align: center;">
-    <div *ngIf="pokemon$ | async as pokemon">
-        <h2>
-            {{ pokemon.name |uppercase }}
-        </h2>
-        <img src="{{ pokemon.sprites.front_default }}">
-        <div>
-            ID: {{ pokemon.id }}
-        </div>
-        <div>
-            Type: {{ pokemon.types[0].type.name | uppercase}}
-        </div>
-        <div>
-            Attack: {{ pokemon.moves[0].move.name | uppercase}}
-        </div>
-    </div>
-</div>
+<mat-card *ngIf="pokemon$ | async as pokemon">
+    <mat-card-header>
+        {{ pokemon.name |uppercase }}
+    </mat-card-header>
+    <img mat-card-image src="{{ pokemon.sprites.front_default }}">
+    <mat-card-content>
+        ID: {{ pokemon.id }}
+    </mat-card-content>
+    <mat-card-content>
+        Type: {{ pokemon.types[0].type.name | uppercase}}
+    </mat-card-content>
+    <mat-card-content>
+        Attack: {{ pokemon.moves[0].move.name | uppercase}}
+    </mat-card-content>
+    <mat-card-content>
+        Attack: {{ pokemon.moves[1].move.name | uppercase}}
+    </mat-card-content>
+</mat-card>

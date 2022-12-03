@@ -11,13 +11,19 @@ img {
     border: .3px solid gray;
 }
 
+.additionalInfo {
+    margin-left: 50px;
+    margin-bottom: 50px;
+}
+
 ul {
     list-style-type: none;
-    list-style: circle;
-    margin: 2px 0 0 100px;
-    padding-top: 3px;
-    padding-bottom: 0;
-    padding-left: 3px;
+    margin-left: 10px;
+    padding: 0rem 0 0 1rem;
+}
+
+li {
+    font-size: 12px;
 }
 
 .container-1 {
@@ -36,7 +42,7 @@ ul {
 .box-2 {
     flex: 1;
     text-align: left;
-    border-right: 1px solid black;
+    border-right: 1.5px solid black;
     // border-left: 1px solid black;
 }
 
@@ -47,4 +53,8 @@ ul {
 
 button {
     margin-left: 5px;
+}
+
+.mat-tab-group {
+    margin-bottom: 48px;
 }

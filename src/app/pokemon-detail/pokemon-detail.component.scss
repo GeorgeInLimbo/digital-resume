@@ -1,0 +1,22 @@
+img {
+    max-height: auto;
+    max-width: 150px;
+}
+
+mat-card {
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ffcb05;
+    border: 10px solid #2a75bb;
+}
+
+:host {
+    display: flex;
+    flex-direction: column;
+}
+
+mat-card-header {
+    justify-content: center;
+    font-weight: bold;
+}

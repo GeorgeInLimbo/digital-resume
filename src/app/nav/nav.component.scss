@@ -1,31 +1,16 @@
-img {
-    width: auto;
-    height: 25px;
-}
-
-span {
-    border-right: 1px solid #bbb;
-}
-
-span:last-child {
-    border-right: none;
-}
-
 a {
-    color: whitesmoke;
+    color: whitesmoke !important;
     text-decoration: none;
 }
 
 span a:hover {
-    color: gray;
-}
-
-span {
-    padding-right: 3.5rem;
-    padding-left: 3.5rem;
+    color: lightgray !important;
 }
 
 .navbar {
-    // position: fixed;
     width: 100%;
+}
+
+.spacer {
+    flex: 1;
 }

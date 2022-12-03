@@ -1,11 +1,8 @@
 <section *ngIf="occupation">
-
     <div class="container-1">
-
         <div class="box-1">
             <img src="{{occupation.logo}}">
         </div>
-
         <div class="box-2">
             <b>{{occupation.company}}</b>
             <br>
@@ -15,56 +12,27 @@
             <br>
             {{occupation.startDate}} to {{occupation.endDate}}
         </div>
-
         <div class="box-3">
             <p>{{occupation.summary}}</p>
         </div>
-
-    </div><br>
-
-    <div style="margin-left: 50px">
-        <button mat-raised-button color="primary" (click)="showDuties()">
-            Responsibilities
-        </button>
-        <button mat-raised-button color="primary" (click)="showSupervisors()">
-            Supervisors
-        </button>
     </div>
 
-    <div *ngIf="displayDuties">
-        <div class="additional-info"><br>
-
-            <ul *ngFor="let duty of occupation.duties">
-                <li>
-                    {{duty}}
-                </li>
-            </ul><br>
-
-        </div>
-
-        <div style="margin-left: 50px">
-            <button mat-raised-button color="primary" (click)="collapse()">
-                Collapse
-            </button>
-        </div>
-
+    <div class="additionalInfo">
+        <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+            <mat-tab label="Responsibilities">
+                <ul *ngFor="let duty of occupation.duties">
+                    <li>
+                        {{duty}}
+                    </li>
+                </ul>
+            </mat-tab>
+            <mat-tab label="Supervisors">
+                <ul *ngFor="let boss of occupation.supervisors">
+                    <li>
+                        {{boss}}
+                    </li>
+                </ul>
+            </mat-tab>
+        </mat-tab-group>
     </div>
-
-    <div *ngIf="displaySupervisors">
-        <div class="additional-info"><br>
-
-            <ul *ngFor="let boss of occupation.supervisors">
-                <li>
-                    {{boss}}
-                </li>
-            </ul><br>
-
-            <div style="margin-left: 50px">
-                <button mat-raised-button color="primary" (click)="collapse()">
-                    Collapse
-                </button>
-            </div>
-
-        </div>
-    </div>
-</section><br><br>
+</section>

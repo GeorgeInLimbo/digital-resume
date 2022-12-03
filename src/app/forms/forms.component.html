@@ -78,11 +78,14 @@
                             nickname
                         </mat-label>
                         <input matInput formControlName="newName">
+                        <button mat-icon-button matSuffix color="warn" (click)="deleteNick(i)">
+                            <mat-icon>delete</mat-icon>
+                        </button>
                     </mat-form-field>
 
-                    <button mat-raised-button color="warn" (click)="deleteNick(i)">
+                    <!-- <button mat-raised-button color="warn" (click)="deleteNick(i)">
                         delete
-                    </button>
+                    </button> -->
 
                 </div>
 
@@ -98,7 +101,7 @@
         <div class="container3">
             <div class="box1">
                 <mat-checkbox formControlName="agree" color="primary">
-                    Are you sure?
+                    <b>Are you sure this information is accurate?</b>
                 </mat-checkbox>
             </div>
 

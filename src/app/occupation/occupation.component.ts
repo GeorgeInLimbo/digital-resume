@@ -13,26 +13,5 @@ import { Jobs } from '../job-interfaces';
 export class OccupationComponent {
 
   @Input() occupation?: Jobs;
-  // OccupationComponent is a child component (or Feature Component) of ResumeComponent.
-
-  displayDuties = false;
-  displaySupervisors = false;
-
-  constructor() { }
-
-  showDuties(): void {
-    this.displayDuties = true;
-    this.displaySupervisors = false;
-  }
-
-  showSupervisors(): void {
-    this.displaySupervisors = true;
-    this.displayDuties = false;
-  }
-
-  collapse(): void {
-    this.displayDuties = false;
-    this.displaySupervisors = false;
-  }
 
 }

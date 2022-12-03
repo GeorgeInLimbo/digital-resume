@@ -22,7 +22,9 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -45,13 +47,15 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
     FormsModule,
     ReactiveFormsModule,
     MatToolbarModule,
+    MatTabsModule,
     MatIconModule,
     MatInputModule,
     MatButtonModule,
     MatSelectModule,
     MatCheckboxModule,
     MatChipsModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
