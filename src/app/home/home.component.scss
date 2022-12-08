@@ -1,43 +1,46 @@
 .selfie {
-    display: block;
-    margin-left: auto;
-    max-width: 160px;
-    max-height: 160px;
-    width: auto;
-    height: auto;
-    padding: 2px;
-    border: 2px solid black;
+    max-width: 250px;
+    max-height: 250px;
+    border: 1px solid black;
 }
 
 p {
-    margin-right: 50px
+    margin-right: 50px;
+    margin-left: 50px;
 }
 
 .title-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    align-content: center;
     flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .titlebox {
-    flex: 1;
-    padding: 30px;
+    flex: 2 2 150px;
+    text-align: center;
+    padding-top: 15px;
+    // display: inline-flex;
+    // border: 1px solid black;
+
 }
 
 .picbox {
-    flex: 1;
-    padding: 30px;
+    display: flex;
+    justify-content: center;
+    flex: 2 2 150px;
+    // padding: 5px;
+    // border: 1px solid black;
 }
 
 aside {
-    font-size: 17px;
+    font-size: 19px;
 }
 
 section {
-    margin: 5%;
+    // margin: 5%;
     text-align: center;
     border-left: 1px solid black;
     border-right: 1px solid black;
-    padding: 15px
+    padding: 5px
 }

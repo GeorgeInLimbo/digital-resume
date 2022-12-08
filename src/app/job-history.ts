@@ -3,10 +3,10 @@ import { Jobs } from './job-interfaces'
 export const JobHistory: Jobs[] = [
     {
         company: 'DHI Title Agency',
-        logo: 'https://www.dhititlelive.com/Resource/LandingScreenLogo/d6a20747-c562-e511-80d8-c4346bb749ef',
+        logo: 'https://www.dhititle.com/DHITitle_1/media/DHITitle/DHITA_Logo_01022019_97h.png',
         title: 'Escrow Officer',
-        startDate: 'March 2021',
-        endDate: 'September 2022',
+        startDate: 'Mar 2021',
+        endDate: 'Sep 2022',
         contact: '(303) 649-7400',
         summary: 'Facilitated multi-party real estate transactions. Prepared financial documents including Closing Disclosures and administrative documentation. Responsible for handling Escrow Accounts for Refinances, New Home Purchases, 1031 exchanges, and Hold-Opens.',
         duties: [
@@ -29,8 +29,8 @@ export const JobHistory: Jobs[] = [
         company: 'Symbio Tax & Administration, LLC',
         logo: 'https://zenprospect-production.s3.amazonaws.com/uploads/pictures/628ddd18be91b20001477faa/picture',
         title: 'Owner/Operator',
-        startDate: 'March 2019',
-        endDate: 'March 2021',
+        startDate: 'Mar 2019',
+        endDate: 'Mar 2021',
         contact: '(720) 926-2671',
         summary: 'Ran a sole proprietorship which worked with Tax Debt Resolution firms to assist mutual clients become compliant with filing requirements with both the federal and state tax authorities. Offered services for individuals, C-corporations, S-Corporations, and Partnerships. Payroll returns, bookkeeping, tax debt mitigation.',
         duties: [
@@ -50,8 +50,8 @@ export const JobHistory: Jobs[] = [
         company: 'Larson Financial, Inc.',
         logo: 'https://larsontaxrelief.com/wp-content/uploads/2022/04/larson-tax-relief-logo.jpg',
         title: 'Senior Associate',
-        startDate: 'August 2015',
-        endDate: 'January 2019',
+        startDate: 'Aug 2015',
+        endDate: 'Jan 2019',
         contact: '(888) 589-0955',
         summary: 'Helped clients with considerable tax debt enter into agreements to eliminate debt. This included penalty abatement, Offers in Compromise, facilitating the release of tax liens on real estate assets, audit representation, audit reconsideration, installment agreement, and non-collectible status.',
         duties: [
@@ -75,8 +75,8 @@ export const JobHistory: Jobs[] = [
         company: 'The Scher Group, PLLC',
         logo: 'https://res.cloudinary.com/rootworks/image/upload/c_pad,h_800,w_1400/b_rgb:ffffff,c_lpad,f_auto,h_630,w_1200/v1/firms/firm-40197217/scher-group-social-logo-web-2020_ahqseu',
         title: 'Staff Accountant',
-        startDate: 'January 2019',
-        endDate: 'April 2019',
+        startDate: 'Jan 2019',
+        endDate: 'Apr 2019',
         contact: '(303) 443-9001',
         summary: 'A seasonal position that required preparing high-income Form 1040 returns, Form 1099 return preparation, reconcilliations, and other tasks related to tax accounting.',
         duties: [
