@@ -9,7 +9,6 @@ import { FormsComponent } from './forms/forms.component';
 
 const routes: Routes = [
   { path: 'resume', component: ResumeComponent },
-  { path: 'skills', component: SkillsComponent },
   { path: 'home', component: HomeComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'pokedex', component: PokedexComponent },

@@ -8,6 +8,8 @@ ul {
 .certs {
     padding-bottom: 35px;
     padding-top: 10px;
+    display: flex;
+    justify-content: center;
 }
 
 li {
@@ -15,7 +17,6 @@ li {
 }
 
 .list {
-    display: inline;
     margin: 0 20px;
 }
 

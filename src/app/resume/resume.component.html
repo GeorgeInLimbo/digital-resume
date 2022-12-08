@@ -1,3 +1,9 @@
-<app-occupation *ngFor="let occupation of occupations; let i = index" [occupation]="occupation"></app-occupation>
+<div *ngFor="let occupation of occupations; let i = index" [ngClass]="{ 'odd': i % 2 !== 0 }"
+    style="margin-bottom: 15px; margin-left: -16px; margin-right: -16px; padding: 15px;">
+    <app-occupation [occupation]=" occupation">
+    </app-occupation>
+</div>
+<app-skills></app-skills>
+
 
 <!-- This code loops through each element of the JobHistory class saved in job-history.ts using *ngFor. -->

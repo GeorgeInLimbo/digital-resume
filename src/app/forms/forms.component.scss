@@ -41,6 +41,7 @@ ul {
 .container3 {
     display: flex;
     text-align: center;
+    flex-direction: column;
 }
 
 .box1 {
@@ -53,4 +54,8 @@ ul {
 
 .box3 {
     flex: 1;
+}
+
+button {
+    margin: 15px 0;
 }
